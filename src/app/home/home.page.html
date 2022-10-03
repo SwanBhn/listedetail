@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Ma liste
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let item of listefilm" (click)="affDetail(item)">
+    <ion-avatar>
+      <img alt=" " src="{{item.posterUrl}}">
+    </ion-avatar>
+    <ion-label>
+      <p>Titre: {{item.title}}</p>
+      <p>Année: {{item.year}}</p>
+    </ion-label>
+  </ion-item>
+</ion-content>
